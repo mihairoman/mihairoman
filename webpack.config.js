@@ -5,7 +5,7 @@ module.exports = {
     context: __dirname,
     watch: true,
     //define entry point
-    entry: './assets/js/app.js',
+    entry: './src/js/app.js',
     //define output point
     output: {
         path: path.join(__dirname, 'dist'),
