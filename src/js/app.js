@@ -56,12 +56,12 @@
                     view.toggleClass(view.navIcon, 'open');
                     view.toggleClass(view.menuMin, 'collapsed');
                 });
-                w.scroll = w.onmousewheel = w.onwheel = function(event) {
-                    if (!view.timelineRevealed && (view.experience.getBoundingClientRect().top < (view.experience.offsetHeight * 0.8))) {
+                w.ontouchend = w.ontouchmove = w.onscroll = w.onmousewheel = w.onwheel = function(event) {
+                    if (!view.timelineRevealed && (view.experience.getBoundingClientRect().top < (view.experience.offsetHeight * 0.5))) {
                         view.revealTimeline();
                         view.timelineRevealed = true;
                     }
-                    if (!view.contactRevealed && view.experience.getBoundingClientRect().top < -20) {
+                    if (!view.contactRevealed && view.experience.getBoundingClientRect().top < -50) {
                         view.requestTick(view.initContact);
                         view.contactRevealed = true;
                     }

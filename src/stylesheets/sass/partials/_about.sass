@@ -10,6 +10,13 @@
     @include bp-large-min
         @include elem-size(50, vh, 100, vw)
 
+    @include bp-medium-landscape
+        height: 100vh
+        padding: 5% 0
+
+    @include bp-small-landscape
+        height: auto
+
     & .inner
         @include flex('column', 'center')
         height: auto

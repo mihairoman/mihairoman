@@ -28,3 +28,11 @@ $max-screen-width: 1920px
 @mixin bp-small-min
   @media only screen and (min-width: $break-small)
     @content
+
+@mixin bp-medium-landscape
+    @media only screen and (max-height: $break-medium) and (orientation: landscape)
+        @content
+
+@mixin bp-small-landscape
+    @media only screen and (max-height: $break-small) and (orientation: landscape)
+        @content
